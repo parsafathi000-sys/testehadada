@@ -1,0 +1,10 @@
+# SulgX Panel v1.1.0
+# Copy the values below into your platform's environment variables & start command.
+
+start_command = "python main.py"
+
+[env]
+ADMIN_PASSWORD = "your-strong-password"
+SECRET_KEY = "generate-a-random-string"
+DB_PATH = "/data/panel.db"
+DOMAIN = "your-app-domain.example.com"

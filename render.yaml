@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: SulgX
+    env: python
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
+    startCommand: python main.py
+    disk:
+      name: sulgx-data
+      mountPath: /data
+      sizeGB: 1
+    envVars:
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DOMAIN
+        sync: false
+      - key: DB_PATH
+        value: /data/panel.db
